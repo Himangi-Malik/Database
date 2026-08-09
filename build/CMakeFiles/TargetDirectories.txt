@@ -1,3 +1,0 @@
-C:/Users/himangimalik/OneDrive - Microsoft/Desktop/database/build/CMakeFiles/database.dir
-C:/Users/himangimalik/OneDrive - Microsoft/Desktop/database/build/CMakeFiles/edit_cache.dir
-C:/Users/himangimalik/OneDrive - Microsoft/Desktop/database/build/CMakeFiles/rebuild_cache.dir

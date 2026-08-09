@@ -1,0 +1,16 @@
+# ninja log v7
+3	431	8077862499801958	CMakeFiles/database.dir/src/main.cpp.obj	b22acd25b32d234f
+29	4127	8077862500127971	CMakeFiles/database.dir/src/database.cpp.obj	7f4fd26bc363a589
+4131	4416	8077862541104795	database.exe	cf785926996b138e
+62	5656	8079890736386162	build.ninja	53fe4b461a09fa9c
+62	5656	8079890736386162	C:/Users/himangimalik/OneDrive - Microsoft/Desktop/database/build/cmake_install.cmake	53fe4b461a09fa9c
+58	6735	8079890737976355	CMakeFiles/database.dir/src/pager.cpp.obj	111d2f2daff0d376
+49	6954	8079890737896680	CMakeFiles/database.dir/src/database.cpp.obj	7f4fd26bc363a589
+40	7021	8079890737776624	CMakeFiles/database.dir/src/main.cpp.obj	b22acd25b32d234f
+7022	8418	8079890807627791	database.exe	61d0392593227d20
+6	801	8079895575904844	CMakeFiles/database.dir/src/pager.cpp.obj	111d2f2daff0d376
+802	1053	8079895583851178	database.exe	61d0392593227d20
+57	772	8079909137370462	CMakeFiles/database.dir/src/database.cpp.obj	7f4fd26bc363a589
+75	774	8079909137490438	CMakeFiles/database.dir/src/pager.cpp.obj	111d2f2daff0d376
+6	886	8079909136794246	CMakeFiles/database.dir/src/main.cpp.obj	b22acd25b32d234f
+887	1135	8079909145635706	database.exe	61d0392593227d20

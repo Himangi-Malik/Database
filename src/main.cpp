@@ -4,11 +4,13 @@
 int main()
 {
     Database db("database.db");
-    auto* page0 = static_cast<char*>(db.getPager().getPage(0));
-    auto* again = static_cast<char*>(db.getPager().getPage(1));
+    
+    char* page0 = static_cast<char*>(db.getPager().getPage(0));
 
-std::cout << static_cast<void*>(page0) << '\n';
-std::cout << static_cast<void*>(again) << '\n';
+
+    db.getPager().markDirty(0);
+
+    std::cout << page0[0] << page0[1] << '\n';
 
     db.run();
 

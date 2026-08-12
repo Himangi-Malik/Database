@@ -2,6 +2,7 @@
 
 #include <fstream>
 #include <string>
+#include <cstdint>
 
 #include "constants.h"
 
@@ -10,6 +11,7 @@ class Pager
 public:
     explicit Pager(const std::string& filename);
     ~Pager();
+    void* getPage(uint32_t page_number);
 
 private:
     std::fstream file;

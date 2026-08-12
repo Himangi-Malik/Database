@@ -1,5 +1,5 @@
 #include "pager.h"
-
+#include <cstdint>
 #include <iostream>
 
 Pager::Pager(const std::string& filename)
@@ -47,12 +47,45 @@ Pager::Pager(const std::string& filename)
 
 }
 
-Pager::~Pager()
-{
-    if (file.is_open())
+
+void* Pager::getPage(uint32_t page_number)
     {
-        file.close();
+        if (page_number >= TABLE_MAX_PAGES)
+        {
+            throw std::out_of_range("Page number exceeds maximum");
+        }
+
+        if (pages[page_number] != nullptr)
+        {
+            return pages[page_number];
+        }
+
+        pages[page_number] = new char[PAGE_SIZE]();
+
+        if (page_number < num_pages)
+        {
+            file.seekg(static_cast<std::streamoff>(page_number) * PAGE_SIZE,
+                    std::ios::beg);
+
+            file.read(pages[page_number], PAGE_SIZE);
+        }
+
+        if (page_number >= num_pages)
+        {
+            num_pages = page_number + 1;
+        }
+
+        return pages[page_number];
     }
 
-    std::cout << "Pager closed file.\n";
+
+Pager::~Pager()
+{
+    for (char*& page : pages)
+    {
+        delete[] page;
+        page = nullptr;
+    }
+
+    file.close();
 }

@@ -10,4 +10,5 @@ add_executable(database
     src/main.cpp
     src/database.cpp
     src/pager.cpp
+    src/row.cpp
 )
